@@ -1,0 +1,11 @@
+# login to azure
+az login
+
+# create resource group
+az group create --name aksresourcegroup --location centralus
+
+#  create container registry
+az acr create --resource-group aksresourcegroup --name aksresourcegroupacr --sku Basic
+
+#  enable admin access
+az acr update --n aksresourcegroupacr --admin-enabled true

@@ -1,0 +1,5 @@
+azure 
+# 
+az group create --name aksresourcegroup --location centralus
+az acr create --resource-group aksresourcegroup --name aksresourcegroupacr --sku Basic
+
